@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/date.css" />
     <link rel="stylesheet" href="../styles/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
   </head>
   <body id="body">
     <header class="titulares header">
@@ -23,38 +33,157 @@
         </ul>
       </nav>
     </header>
+    <section class="d-flex justify-content-center align-items-center">
+      <div class="card shadow col-xs-12 col-sm-6 col-md-6 col-lg-4 p-4">
+        <div class="mb-4 d-flex justify-content-start align-items-center">
+          <h4><i class="bi bi-chat-left-quote"></i> &nbsp; Agéndate</h4>
+        </div>
+        <div class="mb-1">
+          <form id="contacto">
+            <div class="mb-4 d-flex justify-content-between">
+              <div>
+                <label for="nombre">
+                  <i class="bi bi-person-fill"></i> Nombre</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  name="nombre"
+                  id="nombre"
+                  placeholder="ej: Camila"
+                  required
+                />
+                <div class="nombre text-danger"></div>
+              </div>
+              <div>
+                <label for="telefono">
+                  <i class="bi bi-phone-fill"></i> Teléfono</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  name="telefono"
+                  id="telefono"
+                  placeholder="Celular"
+                  required
+                />
+                <div class="telefono text-danger"></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="fecha"
+                ><i class="bi bi-calendar-event-fill"></i> Fecha</label
+              >
+              <input
+                type="date"
+                class="form-control"
+                name="fecha"
+                id="fecha"
+                placeholder="fecha"
+                required
+              />
+              <div class="fecha text-danger"></div>
+            </div>
+            <div class="mb-4">
+              <label for="profesional"
+                ><i class="bi bi-person-fill"></i> Profesional:
+              </label>
+              <input
+                type="radio"
+                class="form-check-input"
+                name="profesional"
+                value="majo"
+              />
+              Majo
+              <input
+                type="radio"
+                class="form-check-input"
+                name="profesional"
+                value="Susana"
+              />
+              Susana
+              <input
+                type="radio"
+                class="form-check-input"
+                name="profesional"
+                value="majo"
+              />
+              Sammy
+              <br /><br />
 
-    <div id="form-content" class="form-content">
-      <form class="form">
-        <input type="text" name="nombre" placeholder="Nombre" required />
-        <input type="tel" name="telefono" placeholder="Télefono" required />
-        <input type="date" name="fecha" placeholder="Fecha" required />
-        <select>
-          <option value="">Profesional</option>
-          <option value="">Maria José</option>
-          <option value="">Susana</option>
-          <option value="">Paula</option>
-          <option value="">Samy</option>
-        </select>
-        <select>
-          <option value="">Servicio</option>
-          <option value="">Semi</option>
-          <option value="">Acrílicas</option>
-          <option value="">Tradicional</option>
-          <option value="">Retiro</option>
-          <option value="">Pedicure</option>
-          <option value="">Spa pies</option>
-        </select>
-        <textarea
-          name="info"
-          cols="10"
-          rows="5"
-          placeholder="Mensaje"
-          required
-        ></textarea>
-        <input type="submit" />
-      </form>
-    </div>
+              <label for="tecnica"
+                ><i class="bi bi-brush-fill"></i> Técnica:
+              </label>
+              <input
+                type="radio"
+                class="form-check-input"
+                name="tecnica"
+                value="semi"
+              />
+              Semi
+              <input
+                type="radio"
+                class="form-check-input"
+                name="tecnica"
+                value="acrilicas"
+              />
+              Acrílicas
+              <input
+                type="radio"
+                class="form-check-input"
+                name="tecnica"
+                value="tradicional"
+              />
+              Tradicional
+              <br />
+              <input
+                type="radio"
+                class="form-check-input"
+                name="tecnica"
+                value="retiro"
+              />
+              Retiro
+              <input
+                type="radio"
+                class="form-check-input"
+                name="tecnica"
+                value="pedicure"
+              />
+              Pedicure
+              <input
+                type="radio"
+                class="form-check-input"
+                name="tecnica"
+                value="Spa de pies"
+              />
+              Spa de pies
+            </div>
+            <div class="mb-4">
+              <label for="mensaje">
+                <i class="bi bi-chat-right-dots-fill" required></i>
+                Mensaje</label
+              >
+              <textarea
+                name="mensaje"
+                id="mensaje"
+                class="form-control"
+                placeholder="ej: hola"
+              ></textarea>
+              <div class="mensaje text-danger"></div>
+            </div>
+
+            <div class="mb-2">
+              <button
+                id="botton"
+                class="col-12 btn btn-primary d-flex justify-content-between"
+              >
+                <span>Enviar </span><i id="icono" class="bi bi-cursor-fill"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <div id="contact" class="flex-container contact-container">
       <article class="flex-item contact">
